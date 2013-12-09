@@ -12,8 +12,6 @@ DEBUG = bool(os.environ.get('DJANGO_DEBUG', 'true'))
 COMPRESS_ENABLED = True
 
 INSTALLED_APPS += (
-    "django_extensions",
-		"debug_toolbar",
 		"django_extensions",
     # "storages",
 )
