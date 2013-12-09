@@ -8,6 +8,7 @@ DATABASES['default'] = dj_database_url.config()
 
 DEBUG = bool(os.environ.get('DJANGO_DEBUG', 'true'))
 
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTOCOL", "https")
 
 COMPRESS_ENABLED = True
 
