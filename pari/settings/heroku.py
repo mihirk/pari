@@ -19,11 +19,7 @@ INSTALLED_APPS += (
 )
 
 
-MIDDLEWARE_CLASSES += (
-		"debug_toolbar.middleware.DebugToolbarMiddleWare",
-)
 
-DEBUG_TOOLBAR_CONFIG = {"INTERCEPT_REDIRECTS": False}
 
 #AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
 #AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
