@@ -2,3 +2,4 @@
 
 dj-database-url==0.2.1
 django-extensions==1.1.1
+django-debug-toolbar==0.9.4

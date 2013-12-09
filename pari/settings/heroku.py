@@ -8,16 +8,22 @@ DATABASES['default'] = dj_database_url.config()
 
 DEBUG = bool(os.environ.get('DJANGO_DEBUG', 'true'))
 
-ALLOWED_HOSTS.append("dev.ruralindiaonline.org")
-
-COMMENTS_DISQUS_SHORTNAME = "twpari"
 
 COMPRESS_ENABLED = True
 
 INSTALLED_APPS += (
     "django_extensions",
+		"debug_toolbar",
+		"django_extensions",
     # "storages",
 )
+
+
+MIDDLEWARE_CLASSES += (
+		"debug_toolbar.middleware.DebugToolbarMiddleWare",
+)
+
+DEBUG_TOOLBAR_CONFIG = {"INTERCEPT_REDIRECTS": False}
 
 #AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
 #AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
