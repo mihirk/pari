@@ -8,6 +8,10 @@ DATABASES['default'] = dj_database_url.config()
 
 DEBUG = bool(os.environ.get('DJANGO_DEBUG', 'true'))
 
+ALLOWED_HOSTS.append("dev.ruralindiaonline.org")
+
+COMMENTS_DISQUS_SHORTNAME = "twpari"
+
 COMPRESS_ENABLED = True
 
 INSTALLED_APPS += (
