@@ -4,9 +4,9 @@ import dj_database_url
 
 from .base import *  # noqa
 
-DATABASES['default'] = dj_database_url.config()
+DATABASES['default'] = dj_database_url.config(default='postgres://postgres:postgres@localhost:5432/pari')
 
-DEBUG = bool(os.environ.get('DJANGO_DEBUG', ''))
+DEBUG = bool(os.environ.get('DJANGO_DEBUG', 'true'))
 
 COMPRESS_ENABLED = True
 
